@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-light d-flex justify-content-between" style="background-color: #e3f2fd;">
+      <div class="p-2 navbar-brand">
+        <%= link_to "Wikinimous", articles_path %>
+      </div>
+      <div class="p-2 navbar-brand">
+      <%= link_to "New article", new_article_path %>
+      </div>
+</nav>
+</div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <% @articles.each do |article|%>
+        <article>
+          <h2>
+          <%= link_to article.title, article_path(article) %>
+          </h2>
+          <%=article.content%>
+          <%end%>
+        </article>
+    </div>
+  </div>
+</div>
